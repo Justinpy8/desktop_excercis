@@ -96,7 +96,6 @@ favorite_nums = {'Justin': [8, 3, 9], 'Dan': [3, 16, 12], 'Kevin': [46, 11, 7], 
 for name, value in favorite_nums.items():
     print(f"{name.title()}'s favorite numbers are: \n{value}")
 
-
 # 6.11
 cities = {'shanghai': {'country': 'china', 'population': 24.8, 'facts': 'pearl of the east'},
           'new york': {'country': 'unite states', 'population': 8.39, 'facts': 'big apple'},
@@ -111,6 +110,7 @@ numbers = list(range(1, 11))
 
 for number in numbers:
     for multi in numbers:
-        print(f"{number} X {multi} = {number * multi}", end= "\t")
+        print(f"{number} X {multi} = {number * multi}", end="\t")
     print("")
 
+print('What a beautiful world!!!')
