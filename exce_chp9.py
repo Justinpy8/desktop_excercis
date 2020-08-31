@@ -128,14 +128,14 @@ class User():
 
 # 9.5
 
-user1 = User('john', 'smith', 'boy', 5, 3.9)
-
-print("Printing 3 login attempts")
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-print(user1.login_attempts)
-
-print("Reset the login to 0")
-user1.reset_login_attempts()
-print(user1.login_attempts)
+# user1 = User('john', 'smith', 'boy', 5, 3.9)
+#
+# print("Printing 3 login attempts")
+# user1.increment_login_attempts()
+# user1.increment_login_attempts()
+# user1.increment_login_attempts()
+# print(user1.login_attempts)
+#
+# print("Reset the login to 0")
+# user1.reset_login_attempts()
+# print(user1.login_attempts)
