@@ -48,6 +48,7 @@ class User():
         self.sex = sex
         self.grade = grade
         self.gdp = gdp
+        self.login_attempts = int()
 
     def describe_user(self):
         info = (self.first, self.last, self.sex, self.grade, self.gdp)
@@ -64,18 +65,77 @@ class User():
         else:
             print(f"{self.first} {self.last} is a {self.sex} in {self.grade}th grade with a GDP of {self.gdp}.")
 
+    def increment_login_attempts(self, ):
+        self.login_attempts += 1
 
-student1 = User('john', 'smith', 'boy', 5, 3.9)
+    def reset_login_attempts(self, reset_login=0):
+        self.login_attempts = reset_login
 
-student1.describe_user()
-student1.greet_user()
 
-student2 = User('Mary', 'thompson', 'girl', 1, 3.1)
+#
+# student1 = User('john', 'smith', 'boy', 5, 3.9)
+#
+# student1.describe_user()
+# student1.greet_user()
+#
+# student2 = User('Mary', 'thompson', 'girl', 1, 3.1)
+#
+# student2.describe_user()
+# student2.greet_user()
+#
+# student3 = User('jerry', 'chen', 'boy', 2, 3.6)
+#
+# student3.describe_user()
+# student3.greet_user()
 
-student2.describe_user()
-student2.greet_user()
 
-student3 = User('jerry', 'chen', 'boy', 2, 3.6)
+# 9.4
 
-student3.describe_user()
-student3.greet_user()
+# class Restaurant():
+#     def __init__(self, name, cuisine_type):
+#         self.name = name.title()
+#         self.cuisine_type = cuisine_type.title()
+#         self.number_served = 0
+#
+#     def describe_restaurant(self):
+#         msg = f"{self.name} makes great {self.cuisine_type}!"
+#         print(f'\n {msg}')
+#
+#     def open_restaurant(self):
+#         msg = f"{self.name} is open. Get in here!!!"
+#         print(f"\n {msg}")
+#
+#     def set_number_served(self, number_served):
+#         self.number_served = number_served
+#
+#     def increment_number_served(self, increment):
+#         self.number_served += increment
+#
+#
+# restaurant = Restaurant('lucky house', 'meatball sandwich')
+#
+# restaurant.number_served = 500
+# print(f"The restaurant has served {restaurant.number_served} customers today so far! ")
+#
+# restaurant.number_served = 890
+# print(f"The restaurant has served {restaurant.number_served} customers today so far! ")
+#
+# restaurant.set_number_served(600)
+# print(f"The restaurant has served {restaurant.number_served} customers today so far! ")
+#
+# restaurant.increment_number_served(300)
+# print(f"The total number of customers served today: {restaurant.number_served}")
+
+# 9.5
+
+user1 = User('john', 'smith', 'boy', 5, 3.9)
+
+print("Printing 3 login attempts")
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+print(user1.login_attempts)
+
+print("Reset the login to 0")
+user1.reset_login_attempts()
+print(user1.login_attempts)
