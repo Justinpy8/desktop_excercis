@@ -91,25 +91,27 @@ class User():
 
 # 9.4
 
-# class Restaurant():
-#     def __init__(self, name, cuisine_type):
-#         self.name = name.title()
-#         self.cuisine_type = cuisine_type.title()
-#         self.number_served = 0
-#
-#     def describe_restaurant(self):
-#         msg = f"{self.name} makes great {self.cuisine_type}!"
-#         print(f'\n {msg}')
-#
-#     def open_restaurant(self):
-#         msg = f"{self.name} is open. Get in here!!!"
-#         print(f"\n {msg}")
-#
-#     def set_number_served(self, number_served):
-#         self.number_served = number_served
-#
-#     def increment_number_served(self, increment):
-#         self.number_served += increment
+class Restaurant():
+    def __init__(self, name, cuisine_type):
+        self.name = name.title()
+        self.cuisine_type = cuisine_type.title()
+        self.number_served = 0
+
+    def describe_restaurant(self):
+        msg = f"{self.name} makes great {self.cuisine_type}!"
+        print(f'{msg}')
+
+    def open_restaurant(self):
+        msg = f"{self.name} is open. Get in here!!!"
+        print(f"{msg}")
+
+    def set_number_served(self, number_served):
+        self.number_served = number_served
+
+    def increment_number_served(self, increment):
+        self.number_served += increment
+
+
 #
 #
 # restaurant = Restaurant('lucky house', 'meatball sandwich')
@@ -139,3 +141,50 @@ class User():
 # print("Reset the login to 0")
 # user1.reset_login_attempts()
 # print(user1.login_attempts)
+
+# 9.6
+
+# class IceCreamStand(Restaurant):
+#
+#     def __init__(self, name, cuisine_type):
+#         super().__init__(name, cuisine_type)
+#         self.flavors = []
+#
+#     def get_flavors(self):
+#         print('We server the follow ice cream flavors:')
+#         for flavor in self.flavors:
+#             print(f" - {flavor.title()}")
+#
+#
+# icecream = IceCreamStand('lucky house', 'ice cream')
+# icecream.flavors = ['vanilla', 'chocola', 'blue berry']
+#
+# icecream.describe_restaurant()
+# icecream.get_flavors()
+
+# 9.7
+
+class Admin(User):
+    def __init__(self, first, last, sex, grade, gdp):
+        super().__init__(first, last, sex, grade, gdp)
+        self.privileges = Privileges()
+
+
+# 9.8
+class Privileges():
+    def __init__(self, privileges=[]):
+        self.privileges = privileges
+
+    def show_privileges(self):
+        print('This admin user have the following privileges:')
+        for privilege in self.privileges:
+            print(f"- {privilege}")
+
+
+admin_user = Admin('john', 'smith', 'boy', 5, 3.9)
+
+admin_user.privileges.show_privileges()
+
+admin_user_privileges = ['add', 'delete', 'post', 'ban']
+admin_user.privileges.privileges = admin_user_privileges
+admin_user.privileges.show_privileges()
