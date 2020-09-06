@@ -1,42 +1,42 @@
 # 9.1 - 9.2
 
-# class Restaurant():
-#     def __init__(self, name, cuisine_type):
-#         self.name = name.title()
-#         self.cuisine_type = cuisine_type.title()
-#
-#     def describe_restaurant(self):
-#         msg = f"{self.name} makes great {self.cuisine_type}!"
-#         print(f'\n {msg}')
-#
-#     def open_restaurant(self):
-#         msg = f"{self.name} is open. Get in here!!!"
-#         print(f"\n {msg}")
-#
-#
-# restaurant1 = Restaurant('lucky house', 'cmeat sandwich')
-#
-# print(restaurant1.name)
-# print(restaurant1.cuisine_type)
-#
-# restaurant1.describe_restaurant()
-# restaurant1.open_restaurant()
-#
-# restaurant2 = Restaurant('spicy kitchen', 'hothot tofu')
-#
-# print(restaurant2.name)
-# print(restaurant2.cuisine_type)
-#
-# restaurant2.describe_restaurant()
-# restaurant2.open_restaurant()
-#
-# restaurant3 = Restaurant('hometown kitchen', 'bbq duck')
-#
-# print(restaurant3.name)
-# print(restaurant3.cuisine_type)
-#
-# restaurant3.describe_restaurant()
-# restaurant3.open_restaurant()
+class Restaurant():
+    def __init__(self, name, cuisine_type):
+        self.name = name.title()
+        self.cuisine_type = cuisine_type.title()
+
+    def describe_restaurant(self):
+        msg = f"{self.name} makes great {self.cuisine_type}!"
+        print(f'\n {msg}')
+
+    def open_restaurant(self):
+        msg = f"{self.name} is open. Get in here!!!"
+        print(f"\n {msg}")
+
+
+restaurant1 = Restaurant('lucky house', 'meatball sandwich')
+
+print(restaurant1.name)
+print(restaurant1.cuisine_type)
+
+restaurant1.describe_restaurant()
+restaurant1.open_restaurant()
+
+restaurant2 = Restaurant('spicy kitchen', 'hothot tofu')
+
+print(restaurant2.name)
+print(restaurant2.cuisine_type)
+
+restaurant2.describe_restaurant()
+restaurant2.open_restaurant()
+
+restaurant3 = Restaurant('hometown kitchen', 'bbq duck')
+
+print(restaurant3.name)
+print(restaurant3.cuisine_type)
+
+restaurant3.describe_restaurant()
+restaurant3.open_restaurant()
 
 # 9.3
 
