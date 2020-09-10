@@ -15,8 +15,8 @@ time.sleep(1)
 password_input = driver.find_element_by_id("login-passwd")
 password_input.send_keys("Zhixiang84")
 driver.find_element_by_xpath('//*[@id="login-signin"]').send_keys(Keys.RETURN)
-time.sleep(2)
-driver.find_element_by_link_text("Mail").click()
+time.sleep(3)
+driver.find_element_by_xpath('//*[@id="ybar-navigation-item-mail"]/a').click()
 time.sleep(1)
 driver.find_element_by_xpath(
     '//*[@id="mail-app-component"]/div[1]/div/div[2]/div/div/div[3]/div/div[1]/ul/li[3]/a').click()
@@ -32,7 +32,7 @@ if email == "amazon.com":
     driver.find_element_by_xpath("//div[@class='ab_C k_w D_F H_7bcz en_0 P_2bJhi p_R m_Z14vXdP I_52qC gl_FM']//span[2]//button[1]//span[1]").click()
 else:
     print("Closing the email.")
-    driver.find_element_by_link_text("Delete").click()
+    driver.find_element_by_name("delete").click()
 
 # driver.find_element_by_xpath("//span[contains(text(),'Delete')]").click()
 
